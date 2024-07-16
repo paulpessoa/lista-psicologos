@@ -53,31 +53,33 @@ export const CustomScroller = ({
             element?.removeEventListener("mousemove", mouseMove);
         };
     }, []);
+    const hoverStyle = {
+        "&:hover": {
+            overflowX: "scroll",
+            cursor: "grab"
+        },
+        "&::-webkit-scrollbar": {
+            height: "0.0em",
+        },
+        "&.active": {
+            cursor: "grabbing",
+        },
+    };
 
     return (
         <div
             ref={scroller}
             style={{
                 display: "grid",
-                gap: "16px", // Using '16px' for gap instead of a number 
+                gap: "16px",
                 gridAutoFlow: "column",
                 overflowX: "hidden",
-                "&:hover": {   // Nested style for :hover
-                    overflowX: "scroll",
-                    cursor: "grab",
-                },
-
-                paddingBlock: "8px", // Using 'paddingBlock' instead of 'py'
+                paddingBlock: "8px",
                 overscrollBehaviorInline: "contain",
                 scrollSnapType: "inline mandatory",
                 scrollPaddingInline: "1rem",
-                "&::-webkit-scrollbar": {
-                    height: "0.0em",
-                },
-                "&.active": {
-                    cursor: "grabbing",
-                },
                 ...style,
+                ...hoverStyle,
             }}
         >
             {children}
