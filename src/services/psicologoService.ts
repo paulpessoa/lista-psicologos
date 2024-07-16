@@ -1,9 +1,9 @@
 import axios from "axios";
-import { IPsicologo } from "@/types/psicologo";
+import { IPsi } from "@/types/psicologo";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "";
 
-export async function getPsiList(): Promise<IPsicologo[]> {
+export async function getPsiList(): Promise<IPsi[]> {
   try {
     const response = await axios.get(API_URL);
     return response.data;
@@ -13,7 +13,7 @@ export async function getPsiList(): Promise<IPsicologo[]> {
   }
 }
 
-export async function getPsiDetail(id: string): Promise<IPsicologo> {
+export async function getPsiDetail(id: string): Promise<IPsi> {
   try {
     const response = await axios.get(`${API_URL}/${id}`);
     if (response.status === 404) {
