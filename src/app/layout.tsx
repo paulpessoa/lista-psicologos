@@ -15,9 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-custom-pink">
-        <ReactQueryProvider>
-          <div>{children}</div>
-        </ReactQueryProvider>
+          {children}
       </body>
     </html>
   );
