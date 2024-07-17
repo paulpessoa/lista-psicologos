@@ -4,10 +4,10 @@ import ProfileDetails from '../../components/ProfileDetails';
 
 export default async function PsicologoPage({ params }: { params: { id: string } }) {
   return (
-    <div className="flex flex-col justify-center items-center mx-auto gap-7 mt-[68px]">
+    <div className="flex flex-col justify-center items-center mx-auto my-[68px]">
       <a
         href="/"
-        className="bg-red-400 hover:bg-red-500 text-white py-2 px-4 rounded-[46px] w-[200px] flex items-center justify-center"
+        className="bg-red-400 hover:bg-red-500 text-white py-2 px-4 rounded-[46px] w-[200px] flex items-center justify-center mb-[58px]"
       >
         <Image
           src="/icons/Arrow_Left_MD.svg"
