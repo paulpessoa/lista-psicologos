@@ -20,7 +20,6 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-primary-900">
         {children}
-      </body>
       <footer className="bg-primary-900 text-neutral-500 py-4 text-center text-base">
         <div className="container mx-auto">
           <div className="flex justify-center items-center space-x-4">
@@ -33,6 +32,7 @@ export default function RootLayout({
           </div>
         </div>
       </footer>
+      </body>
     </html>
   );
 }
