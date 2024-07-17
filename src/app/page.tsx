@@ -10,21 +10,21 @@ async function fetchPsiList(): Promise<IPsi[]> {
   return data;
 }
 
-export default async function fetchPsiListPagina() {
+export default async function fetchPsiListPage() {
   const psicologos = await fetchPsiList();
   return (
-    <main className="px-20 py-24">
-      <header> {/* Tag header para o logo */}
+    <main className="pl-20 py-24">
+      <header>
         <Image
           src="/assets/logo4.svg"
           alt="Psi do Futuro"
           width={136}
           height={21}
-          priority // Para otimizar o carregamento
+          priority
         />
       </header>
 
-      <section> {/* Tag section para o conteúdo principal */}
+      <section>
         <h1 className="mt-4 font-extrabold text-[52px] leading-none text-red-400">
           Encontre a profissional <br />certa e transforme sua vida.
         </h1>
