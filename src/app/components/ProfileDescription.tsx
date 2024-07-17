@@ -13,7 +13,7 @@ const ProfileDescription: React.FC<IPsi> = (psicologo) => {
           WebkitBoxOrient: "vertical",
           textOverflow: "ellipsis",
         }}
-        className='text[#64696D] text-sm leading-4 mb-1'>
+        className='text-neutral-600 text-sm leading-4 mb-1'>
         {bio}
       </p>
       <a href={`/psi/${id}`} className="text-blue-500 hover:underline">

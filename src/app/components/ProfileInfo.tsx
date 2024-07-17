@@ -5,13 +5,13 @@ const ProfileInfo: React.FC<IPsi> = (psicologo) => {
     const {nickName, specialization, crp} = psicologo
     return (
         <div className="flex flex-col flex-1 justify-center my-auto">
-            <p className="font-bold text-md text-[#002A47]">
+            <p className="font-bold text-md text-secondary-500">
                 {nickName}
             </p>
-            <p className="text-[#64696D] text-sm">
+            <p className="text-neutral-600 text-sm">
                 {specialization ?? "Especialização não informada"}
             </p>
-            <p className="text-[#64696D] text-sm leading-none">
+            <p className="text-neutral-600 text-sm leading-none">
                 CRP: {crp ?? "Nao informado"}
             </p>
         </div>
